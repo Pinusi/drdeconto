@@ -1,0 +1,22 @@
+{
+  "name": "dottordeconto",
+  "version": "0.0.0",
+  "authors": [
+    "Cecilia De Conto <deconto.cecilia@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "IN/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.3.0",
+    "jquery": "~2.1.1",
+    "modernizr": "~2.6.2",
+    "angular": "1.4"
+  }
+}
