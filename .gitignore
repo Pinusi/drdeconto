@@ -1,4 +1,5 @@
-/node_modules/
-/.sass-cache/
-/.tmp/
-/OUT/
+/node_modules
+/.sass-cache
+/.tmp
+/dest
+/vendor/bower_components

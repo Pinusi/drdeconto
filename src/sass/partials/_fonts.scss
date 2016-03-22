@@ -1,0 +1,14 @@
+$font-folder: '../assets/fonts/';
+
+@font-face {
+    font-family: 'franchise_freebold';
+    src: url($font-folder + 'franchise-free-bold-webfont.eot');
+    src: url($font-folder + 'franchise-free-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url($font-folder + 'franchise-free-bold-webfont.woff2') format('woff2'),
+         url($font-folder + 'franchise-free-bold-webfont.woff') format('woff'),
+         url($font-folder + 'franchise-free-bold-webfont.ttf') format('truetype'),
+         url($font-folder + 'franchise-free-bold-webfont.svg#franchise_freebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
