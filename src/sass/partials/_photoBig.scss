@@ -1,0 +1,32 @@
+.image_big{
+		position: relative;
+		.image_image{
+			@include flex-width(700);
+			@include flex-height(400);
+			overflow: hidden;
+			position: relative;
+
+			img{
+				width: 110%;
+				position: absolute;
+			}
+		}
+
+		.image_info{
+			position: absolute;
+			@include flex-left(700);
+			@include flex-bottom(100);
+			border-bottom: solid 1px;
+
+			.header{
+				@include flex-margin(20,0,20,30);
+				font-family: 'franchise_freebold';
+				@include font-dimensions(25,25);
+			}
+
+			.text{
+				@include flex-margin(0,0,0,30);
+				@include font-dimensions(18,25);
+			}
+		}
+	}

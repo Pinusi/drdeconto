@@ -1,5 +1,5 @@
 /**
-  COMMON VARIABLES
+COMMON VARIABLES
 **/
 $rem: 16;
 $default_font_size: 12;
@@ -11,14 +11,24 @@ $default_line_height: 17;
 @import 'partials/fonts';
 @import 'partials/mixins';
 
+@import 'partials/menu';
+@import 'partials/menuLink';
+@import 'partials/photoBig';
+@import 'partials/line';
+
 body{
 	font-family: 'Gentium Book Basic', serif;
 }
 
+.page{
+	position: relative;
+}
+
 footer{
 	text-align: center;
-	@include flex-padding(40,0,40,0);
-	background-color: $green;
+	@include flex-padding(40,0,80,0);
+	background-color: $light-pink;
+	color: $white;
 
 	p{
 		margin: 0px;
@@ -33,24 +43,62 @@ footer{
 	}
 }
 
+header{
+	background-image: url('../assets/imgs/test.jpg');
+	background-position: 50% 50%;
+	height: 100vh;
+	min-height: 700px;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+}
+
 .title{
-		font-family: 'franchise_freebold';
-	}
+	font-family: 'franchise_freebold';
+}
 
 .email{
 	font-family: 'Open Sans', sans-serif;
 	text-transform: uppercase;
 	font-weight: 800;
 	text-decoration: none;
-	color: $black;
+	color: $white;
 	border: solid 1px;
 	@include flex-margin(20,0,0,0);
 	@include flex-padding(10,20,10,20);
 	display: inline-block;
 
 	&:hover{
-		background-color: $black;
-		color: $green;
+		background-color: $white;
+		color: $light-pink;
+	}
+}
+
+.studio{
+	@include flex-padding(0,160,0,160);
+	position: relative;
+	overflow: hidden;
+
+	.lineBG{
+		background-color: $light-pink;
+	}
+
+	.line.lineLeft, .line.lineRight{
+		padding: 0px;
+	}
+
+	.intro{
+		left: 50%;
+		display: inline-block;
+		position: relative;
+		@include translate(-50%,0);
+		@include flex-margin(140,0,140,0);
+		@include flex-width(700);
+		@include font-dimensions(33,45);
+	}
+
+	.text{
+
 	}
 }
 

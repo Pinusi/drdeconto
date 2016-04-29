@@ -1,43 +1,57 @@
-var path = require('path');
+// var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWepbackPlugin = require('html-webpack-plugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
 	name: 'build',
-	entry: ['./src/app/js/main',
-		'./src/index.html',
-		'./src/sass/main.scss'
+	context: __dirname + '/src',
+	entry: [
+	'./app/js/main',
+	'./sass/main.scss'
 	],
 	output: {
-		path: 'dist',
-		filename: 'js/main.js',
+		path: __dirname + '/dist',
+		filename: 'js/main.[hash].js',
 		publicPath: '/'
 	},
 	module: {
 		loaders: [
-			{ 
-				test: /\.js$/, 
-				loaders: ['react-hot','babel-loader'], 
-				exclude: /node_modules/ 
-			},
-			{
-				test: /\.html$/,
-				loader: 'file?name=[name].[ext]'
-			},
-			{ 
-				test: /\.(png|jpg)$/, 
-				loader: 'file-loader?name=images/[name].[ext]' 
-			},
-			{ 
-				test: /\.(woff|eot|svg|ttf|woff2)$/, 
-				loader: 'file-loader?name=fonts/[name].[ext]' 
-			},
-			{
-				test: /\.scss$/,
-				loader: ExtractTextPlugin.extract('css-loader?sourceMap!sass-loader?sourceMap=true&sourceMapContents=true')
-			}
+		{ 
+			test: /\.js$/, 
+			loaders: ['react-hot','babel-loader'], 
+			exclude: /node_modules/ 
+		},
+		{
+			test: /\.json$/,
+			loader: 'file-loader?name=assets/[name].[ext]'
+		},
+		{ 
+			test: /\.(png|jpg)$/, 
+			loader: 'file-loader?name=images/[name].[hash].[ext]' 
+		},
+		{ 
+			test: /\.(woff|eot|svg|ttf|woff2)$/, 
+			loader: 'file-loader?name=assets/fonts/[name].[hash].[ext]' 
+		},
+		{
+			test: /\.scss$/,
+			loader: ExtractTextPlugin.extract(
+				'css-loader?sourceMap!sass-loader?sourceMap'
+				)
+		}
 		]
 	},
 	plugins: [
-		new ExtractTextPlugin('css/main.css')
+	new ExtractTextPlugin('css/[name].[contenthash].css'),
+	new CleanWebpackPlugin(['dist'], {
+		root: __dirname,
+		verbose: true, 
+		dry: false
+	}),
+	new HtmlWepbackPlugin({
+		filename: 'index.html',
+		template: 'index.html',
+	})
 	]
 };

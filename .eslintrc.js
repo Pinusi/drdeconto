@@ -12,10 +12,12 @@ module.exports = {
         },
         "sourceType": "module"
     },
+    "parser": "babel-eslint",
     "plugins": [
         "react"
     ],
     "rules": {
+        "strict": 0,
         "indent": [
             "error",
             "tab"

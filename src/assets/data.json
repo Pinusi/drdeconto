@@ -1,0 +1,35 @@
+{
+	"header":{},
+	"studio": {
+		"intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat finibus enim, ut malesuada quam pretium vel.",
+		"photo_header": "Lo Studio",
+		"photo_txt": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat finibus enim, ut malesuada quam pretium vel."
+	},
+	"team": {
+		"title": "Il Team",
+		"members": [
+			{
+				"name": "Giuseppe De Conto",
+				"position": "Dottore",
+				"profile": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat finibus enim, ut malesuada quam pretium vel."
+			},
+			{
+				"name": "Marina Rosa",
+				"position": "Office Manager",
+				"profile": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat finibus enim, ut malesuada quam pretium vel."
+			},
+			{
+				"name": "Monica Cardamone",
+				"position": "Igenista",
+				"profile": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat finibus enim, ut malesuada quam pretium vel."
+			},
+			{
+				"name": "Margherita",
+				"position": "Assistente alla Poltrona",
+				"profile": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat finibus enim, ut malesuada quam pretium vel."
+			}
+		]
+	},
+	"footer": {}
+}
