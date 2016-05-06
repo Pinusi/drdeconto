@@ -1,10 +1,21 @@
 .image_big{
 		position: relative;
+		left: 50%;
+		@include translate(-65%,0);
+		display: inline-block;
+		
 		.image_image{
 			@include flex-width(700);
 			@include flex-height(400);
 			overflow: hidden;
 			position: relative;
+			border-right: solid 4px;
+
+			.team &{
+				border-right: solid 4px $white;
+				@include flex-width(660);
+				@include flex-height(360);
+			}
 
 			img{
 				width: 110%;
@@ -17,6 +28,11 @@
 			@include flex-left(700);
 			@include flex-bottom(100);
 			border-bottom: solid 1px;
+			
+			.team &{
+				color: $white;
+				@include flex-left(660);
+			}
 
 			.header{
 				@include flex-margin(20,0,20,30);

@@ -14,6 +14,7 @@ $default_line_height: 17;
 @import 'partials/menu';
 @import 'partials/menuLink';
 @import 'partials/photoBig';
+@import 'partials/photoSmall';
 @import 'partials/line';
 
 body{
@@ -97,8 +98,60 @@ header{
 		@include font-dimensions(33,45);
 	}
 
-	.text{
+	.desc{
+		@include flex-margin(100,0,100,0);
+		@include font-dimensions(20,28);
+		@include flex-width(700);
+	}
+}
 
+.team{
+	background-color: $lighter-pink;
+	@include flex-padding(60,130,100,130);
+	position: relative;
+	overflow: hidden;
+
+	.section_title{
+		text-align: center;
+		font-family: 'franchise_freebold';
+		@include font-dimensions(70,90);
+		@include flex-margin(40,0,20,0);
+		color: $white;
+	}
+
+	.section_subtitle{
+		@include flex-margin(15,30,100,0);
+		@include font-dimensions(20,28);
+		@include flex-width(700);
+		text-align: right;
+		float: right;
+		color: $white;
+	}
+
+	.clear{
+		@include flex-margin(0,0,50,0);
+	}
+
+	.section_photos{
+		@include flex-margin(0,30,0,30);
+	}
+}
+
+.map{
+	background-image: url('../assets/imgs/map.png');
+	background-position: 50% 50%;
+	width: 100%;
+	min-height: 400px;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+
+	.lineBG{
+		background-color: $light-pink;
+	}
+
+	.line.lineLeft, .line.lineRight{
+		padding: 0px;
 	}
 }
 

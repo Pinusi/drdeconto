@@ -4,10 +4,11 @@
 		"intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat finibus enim, ut malesuada quam pretium vel.",
 		"photo_header": "Lo Studio",
 		"photo_txt": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat finibus enim, ut malesuada quam pretium vel."
+		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut libero quis lorem pharetra convallis. Donec sed mauris massa. Duis mi ipsum, auctor sed felis sit amet, finibus aliquam felis. Vivamus pretium orci eu ultrices suscipit. Mauris eu quam iaculis, rhoncus magna vel, varius ligula. Phasellus dignissim porttitor libero et fermentum. Donec a hendrerit sem. Nunc quis mi turpis. Nullam lacinia fermentum urna eu vehicula. Morbi facilisis vestibulum odio, eget faucibus arcu dignissim nec. Proin dolor dui, interdum in tellus id, pharetra commodo leo. Sed imperdiet nibh sed ligula efficitur, vel facilisis quam aliquam. Proin et massa nec tortor pellentesque pellentesque. Praesent placerat ante ac massa dignissim blandit id eget lorem. Integer interdum lobortis diam quis fringilla. Quisque ac lobortis nunc. Fusce lorem lacus, volutpat eget mollis eget, dapibus ut nibh. Curabitur lacinia leo a mattis fermentum. Quisque gravida luctus luctus. Suspendisse id feugiat eros. Integer lorem nibh, mollis nec mauris a, eleifend maximus arcu. Pellentesque in justo interdum, pretium mauris nec, sagittis metus. Nunc maximus ligula purus, vel porta diam mattis ac."
 	},
 	"team": {
 		"title": "Il Team",
+		"subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut libero quis lorem pharetra convallis. Donec sed mauris massa. Duis mi ipsum, auctor sed felis sit amet, finibus aliquam felis. Vivamus pretium orci eu ultrices suscipit. Mauris eu quam iaculis, rhoncus magna vel, varius ligula. Phasellus dignissim porttitor libero et fermentum. Donec a hendrerit sem. Nunc quis mi turpis. Nullam lacinia fermentum urna eu vehicula. Morbi facilisis vestibulum odio, eget faucibus arcu dignissim nec. Proin dolor.",
 		"members": [
 			{
 				"name": "Giuseppe De Conto",

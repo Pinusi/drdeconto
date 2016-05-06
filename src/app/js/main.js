@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Studio from './components/Studio';
 import Team from './components/Team';
 import Menu from './components/Menu';
+import Map from './components/Map';
 import Line from './components/Line';
 import data from '../../assets/data.json';
 
@@ -65,7 +66,8 @@ class Page extends React.Component {
 					<Line position="Bottom" />
 					<Header data={this.state.data.header} menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} menuOpened={this.state.menuOpened} menuPostion={this.state.scrollPosition}/>
 					<Studio data={this.state.data.studio} menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} menuOpened={this.state.menuOpened} menuPostion={this.state.scrollPosition}/>
-					<Team data={this.state.data.team} />
+					<Team data={this.state.data.team}  menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} menuOpened={this.state.menuOpened} menuPostion={this.state.scrollPosition}/>
+					<Map   menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} menuOpened={this.state.menuOpened} menuPostion={this.state.scrollPosition}/>
 					<Footer data={this.state.data.footer} />
 				</div>
 			</div>

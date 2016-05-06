@@ -1,0 +1,40 @@
+.image_small{
+	position: relative;
+    width: 33%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+
+    .image_image{
+			width: 100%;
+			@include flex-height(320);
+			overflow: hidden;
+			position: relative;
+			border-bottom: solid 3px $white;
+
+			img{
+				width: 110%;
+				position: absolute;
+			}
+		}
+
+	.image_info{
+			color: $white;
+			position: absolute;
+			@include flex-top(340);
+			border-right: solid 1px $white;
+    		@include flex-right(60);
+    		text-align: right;
+
+    		.header{
+				@include flex-margin(5,20,0,0);
+				font-family: 'franchise_freebold';
+				@include font-dimensions(21,21);
+			}
+
+			.text{
+				@include flex-margin(10,20,0,0);
+				@include font-dimensions(16,22);
+			}
+		}
+}
