@@ -48,7 +48,6 @@ header{
 	background-image: url('../assets/imgs/test.jpg');
 	background-position: 50% 50%;
 	height: 100vh;
-	min-height: 700px;
 	background-size: cover;
 	position: relative;
 	overflow: hidden;
@@ -114,7 +113,7 @@ header{
 	.section_title{
 		text-align: center;
 		font-family: 'franchise_freebold';
-		@include font-dimensions(70,90);
+		@include font-dimensions(90,90);
 		@include flex-margin(40,0,20,0);
 		color: $white;
 	}

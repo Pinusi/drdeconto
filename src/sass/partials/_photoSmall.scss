@@ -10,7 +10,10 @@
 			@include flex-height(320);
 			overflow: hidden;
 			position: relative;
-			border-bottom: solid 3px $white;
+			border-radius: 9px 0px 9px 0px;
+    		border: solid 1px transparent;
+    		border-bottom: solid 3px $white;
+    		border-right: solid 3px $white;
 
 			img{
 				width: 110%;
@@ -21,7 +24,7 @@
 	.image_info{
 			color: $white;
 			position: absolute;
-			@include flex-top(340);
+			@include flex-top(341);
 			border-right: solid 1px $white;
     		@include flex-right(60);
     		text-align: right;

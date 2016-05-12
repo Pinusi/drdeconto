@@ -8,7 +8,6 @@ class Map extends React.Component {
 		let divStyle = {
 			top: this.props.menuPostion-$("header").height()-$("#studio").height()-$("#team").outerHeight()+65
 		};
-		console.log(divStyle);
 		return <div id="map" className="map">
 					<MenuButton menuClick={this.props.menuClick} menuOver={this.props.menuOver} menuOpened={this.props.menuOpened} position={divStyle} menuOvered={this.props.menuOvered}/>
 					<Line position="Left" />

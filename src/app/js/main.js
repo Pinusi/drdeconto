@@ -8,6 +8,7 @@ import Team from './components/Team';
 import Menu from './components/Menu';
 import Map from './components/Map';
 import Line from './components/Line';
+import Promotions from './components/Promotions';
 import data from '../../assets/data.json';
 
 class Page extends React.Component {
@@ -67,7 +68,8 @@ class Page extends React.Component {
 					<Header data={this.state.data.header} menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} menuOpened={this.state.menuOpened} menuPostion={this.state.scrollPosition}/>
 					<Studio data={this.state.data.studio} menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} menuOpened={this.state.menuOpened} menuPostion={this.state.scrollPosition}/>
 					<Team data={this.state.data.team}  menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} menuOpened={this.state.menuOpened} menuPostion={this.state.scrollPosition}/>
-					<Map   menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} menuOpened={this.state.menuOpened} menuPostion={this.state.scrollPosition}/>
+					<Promotions data={this.state.data.promotions}/>
+					<Map menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} menuOpened={this.state.menuOpened} menuPostion={this.state.scrollPosition}/>
 					<Footer data={this.state.data.footer} />
 				</div>
 			</div>

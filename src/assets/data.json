@@ -32,5 +32,15 @@
 			}
 		]
 	},
+	"promotions": {
+		"title": "Promotions",
+		"list": [
+			{
+				"title": "pulizia bambini 3x1",
+				"sprite": "",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+			}
+		]
+	},
 	"footer": {}
 }

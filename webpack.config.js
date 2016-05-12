@@ -15,6 +15,7 @@ module.exports = {
 		filename: 'js/main.[hash].js',
 		publicPath: '/'
 	},
+	devtool: 'eval-source-map',
 	module: {
 		loaders: [
 		{ 

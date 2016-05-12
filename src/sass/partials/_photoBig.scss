@@ -9,10 +9,14 @@
 			@include flex-height(400);
 			overflow: hidden;
 			position: relative;
-			border-right: solid 4px;
+			border-radius: 9px 0px 9px 0px;
+    		border: solid 1px transparent;
+    		border-bottom: solid 4px $black;
+    		border-right: solid 4px $black;
 
 			.team &{
 				border-right: solid 4px $white;
+				border-bottom: solid 4px $white;
 				@include flex-width(660);
 				@include flex-height(360);
 			}
@@ -25,13 +29,13 @@
 
 		.image_info{
 			position: absolute;
-			@include flex-left(700);
+			@include flex-left(701);
 			@include flex-bottom(100);
 			border-bottom: solid 1px;
 			
 			.team &{
 				color: $white;
-				@include flex-left(660);
+				@include flex-left(661);
 			}
 
 			.header{
