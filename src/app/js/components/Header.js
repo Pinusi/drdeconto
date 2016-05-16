@@ -20,6 +20,12 @@ class Header extends React.Component {
 		var scene = new ScrollMagic.Scene({triggerElement: this.header, triggerHook: "onLeave", duration: height, offset: 10})
 						.setTween(tween)
 						.addTo(this.animationController);
+		this.attachEvents();
+	}
+	attachEvents(){
+		$(this.contact).on('click', function(){
+			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+		});
 	}
 	render() {
 		let divStyle = {
@@ -27,7 +33,14 @@ class Header extends React.Component {
 		};
 		return <header ref={(ref) => this.header = ref}>
 					<MenuButton menuClick={this.props.menuClick} menuOver={this.props.menuOver} menuOpened={this.props.menuOpened} position={divStyle} menuOvered={this.props.menuOvered}/>
-					<img ref={(ref) => this.logo = ref} className="logo" src={ logo }/>
+					<div ref={(ref) => this.logo = ref} className="logo">
+						<img src={ logo }/>
+						<a ref={(ref) => this.contact = ref} className='button'>contattaci</a>
+					</div>
+					<div className="scroll">
+						<p></p>
+						<p>"Scrolla" per continuare</p>
+					</div>
 				</header>;
 	}
 }

@@ -53,11 +53,23 @@ header{
 	overflow: hidden;
 
 	.logo{
+		img{
+			width: 100%;
+		}
 		width: 60%;
 		@include translate(-50%,-50%);
 		left: 50%;
 		position: absolute;
 		top: 50%;
+	}
+
+	.scroll{
+		left: 50%;
+		position: absolute;
+		@include translate(-50%,0);
+		@include flex-bottom(10);
+		@include font-dimensions(14,14);
+		color: $white;
 	}
 }
 
@@ -65,20 +77,38 @@ header{
 	font-family: 'franchise_freebold';
 }
 
-.email{
+.button{
 	font-family: 'Open Sans', sans-serif;
 	text-transform: uppercase;
 	font-weight: 800;
 	text-decoration: none;
 	color: $white;
 	border: solid 1px;
-	@include flex-margin(20,0,0,0);
 	@include flex-padding(10,20,10,20);
 	display: inline-block;
+	@include transition(background-color, 0.3s, ease-in-out);
+	cursor: pointer;
 
 	&:hover{
 		background-color: $white;
-		color: $light-pink;
+		color: $pink;
+		border: solid 1px $white;
+	}
+
+	footer &{
+		color: $white;
+		@include flex-margin(20,0,0,0);
+		&:hover{
+			background-color: $white;
+			color: $light-pink;
+		}
+	}
+
+	header &{
+		left: 50%;
+		@include translate(-50%,0);
+		position: relative;
+		@include flex-margin(20,0,0,0);
 	}
 }
 
