@@ -14,11 +14,9 @@
     		border: solid 1px transparent;
     		border-bottom: solid 3px $white;
     		border-right: solid 3px $white;
-
-			img{
-				width: 110%;
-				position: absolute;
-			}
+    		background-position: 50% 0%;
+    		background-size: cover;
+    		background-repeat: no-repeat;
 		}
 
 	.image_info{

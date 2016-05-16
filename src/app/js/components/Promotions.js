@@ -4,7 +4,7 @@ class Promotions extends React.Component {
 	render() {
 		return <div className="promotions">
 			<div className="promotion">
-				<div class="animatedIcon"></div>
+				<div className="animatedIcon"></div>
 				<p>title</p>
 				<p>description</p>
 			</div>

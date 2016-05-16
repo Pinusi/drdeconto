@@ -13,17 +13,14 @@
     		border: solid 1px transparent;
     		border-bottom: solid 4px $black;
     		border-right: solid 4px $black;
+    		background-position: 50% 0%;
+    		background-size: cover;
 
 			.team &{
 				border-right: solid 4px $white;
 				border-bottom: solid 4px $white;
 				@include flex-width(660);
 				@include flex-height(360);
-			}
-
-			img{
-				width: 110%;
-				position: absolute;
 			}
 		}
 
