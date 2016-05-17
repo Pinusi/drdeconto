@@ -1,5 +1,6 @@
 import React from 'react';
 import MenuButton from './MenuButton';
+import Arrow from './icons/Arrow';
 import $ from 'jquery';
 import ScrollMagic from 'ScrollMagic';
 import 'animation.gsap';
@@ -38,8 +39,8 @@ class Header extends React.Component {
 						<a ref={(ref) => this.contact = ref} className='button'>contattaci</a>
 					</div>
 					<div className="scroll">
-						<p></p>
-						<p>"Scrolla" per continuare</p>
+						<p className="arrow"><Arrow /></p>
+						<p>scorri</p>
 					</div>
 				</header>;
 	}

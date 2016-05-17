@@ -35,12 +35,35 @@ footer{
 		margin: 0px;
 
 		&.subtitle{
-			@include font-dimensions(30,48);
+			@include font-dimensions(22,28);
+			@include flex-margin(0,0,20,0);
 		}
 	}
 
 	p.title{
-		@include font-dimensions(55,60);
+		@include font-dimensions(60,70);
+	}
+	.divider{
+		@include flex-padding(0,0,20,0);
+    	border-bottom: solid 2px;
+    	@include flex-margin(0,0,20,0);
+    	display: inline-block;
+        @include flex-width(80);
+        color: $dark-pink;
+	}
+
+	a:first-child{
+		@include flex-padding(0,8,0,0);
+	}
+
+	.important{
+		@include font-dimensions(20,30);
+			color: $white;
+			text-decoration: none;
+			font-family: 'Open Sans', sans-serif;
+			letter-spacing: 0.1rem;
+			font-weight: 800;
+			// border-bottom: solid 3px $white;
 	}
 }
 
@@ -67,9 +90,20 @@ header{
 		left: 50%;
 		position: absolute;
 		@include translate(-50%,0);
-		@include flex-bottom(10);
-		@include font-dimensions(14,14);
+		@include flex-bottom(20);
+		@include font-dimensions(11,11);
 		color: $white;
+		font-family: 'Open Sans', sans-serif;
+		text-transform: uppercase;
+
+		p{
+			margin: 0px;
+		}
+	}
+
+	.arrow{
+		text-align: center;
+		fill: $pink;
 	}
 }
 
@@ -207,6 +241,15 @@ header{
 
 	.line.lineLeft, .line.lineRight{
 		padding: 0px;
+	}
+
+	.address{
+		display: inline-block;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    padding: 20px;
+    text-align: right;
 	}
 }
 

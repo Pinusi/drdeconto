@@ -12,6 +12,11 @@ class Map extends React.Component {
 					<MenuButton menuClick={this.props.menuClick} menuOver={this.props.menuOver} menuOpened={this.props.menuOpened} position={divStyle} menuOvered={this.props.menuOvered}/>
 					<Line position="Left" />
 					<Line position="Right" />
+					<div className="address">
+						<p>Via Fabio Filzi 3</p>
+						<p>Terrazzano di Rho</p>
+						<p>20017, (Milano)</p>
+					</div>
 				</div>;
 	}
 }
