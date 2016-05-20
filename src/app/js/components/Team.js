@@ -16,14 +16,13 @@ class Team extends React.Component {
 		};
 		let photos = [photo_0, photo_1, photo_2, photo_3];
 		return <div id="team" className="team">
-			<div className="pattern"></div>
 			<MenuButton menuClick={this.props.menuClick} menuOver={this.props.menuOver} menuOpened={this.props.menuOpened} position={divStyle} menuOvered={this.props.menuOvered}/>
 			<div className="section_title"><span>{this.props.data.title}</span></div>
 			<div className="section_subtitle">{this.props.data.subtitle}</div>
 			<div className="section_photos">
 				{teamMembers.map(function(member, i) {
 					if(i == 0){
-						return <div className="clear"><PhotoBig  key={i} photo_src={photos[i]} photo_txt={member.position} photo_header={member.name}/></div>
+						return <div className="clear"><PhotoBig key={i} photo_src={photos[i]} photo_txt={member.position} photo_header={member.name}/></div>
 					}
 					else{
 						return <PhotoSmall key={i} photo_src={photos[i]} photo_txt={member.position} photo_header={member.name}/>

@@ -19,6 +19,7 @@ class Page extends React.Component {
 				"header":{},
 				"studio": {},
 				"team": {},
+				"promotions": {},
 				"footer": {}
 			},
 			menuOpened: false,

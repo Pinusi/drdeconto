@@ -33,11 +33,30 @@
 		]
 	},
 	"promotions": {
-		"title": "Promotions",
+		"title": "Promozioni",
 		"list": [
 			{
 				"title": "pulizia bambini 3x1",
 				"sprite": "",
+				"date": "05/05/2016",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+			},
+			{
+				"title": "pulizia bambini 3x1",
+				"sprite": "",
+				"date": "05/05/2016",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+			},
+			{
+				"title": "pulizia bambini 3x1",
+				"sprite": "",
+				"date": "05/05/2016",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+			},
+			{
+				"title": "pulizia bambini 3x1",
+				"sprite": "",
+				"date": "05/05/2016",
 				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 			}
 		]
