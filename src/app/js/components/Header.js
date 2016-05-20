@@ -4,6 +4,7 @@ import Arrow from './icons/Arrow';
 import $ from 'jquery';
 import ScrollMagic from 'ScrollMagic';
 import 'animation.gsap';
+import Line from './Line';
 import 'debug.addIndicators';
 import TimelineMax from 'TimelineMax';
 import logo from "../../../assets/imgs/logo.png";
@@ -33,6 +34,7 @@ class Header extends React.Component {
 			top: this.props.menuPostion+65
 		};
 		return <header ref={(ref) => this.header = ref}>
+					<Line position="Right" />
 					<MenuButton menuClick={this.props.menuClick} menuOver={this.props.menuOver} menuOpened={this.props.menuOpened} position={divStyle} menuOvered={this.props.menuOvered}/>
 					<div ref={(ref) => this.logo = ref} className="logo">
 						<img src={ logo }/>

@@ -26,45 +26,84 @@ body{
 }
 
 footer{
-	text-align: center;
-	@include flex-padding(40,0,80,0);
-	background-color: $light-pink;
-	color: $white;
+	.box{
+		float: left;
+		width: 30%;
+		@include flex-height(200);
+		@include flex-padding(20,20,20,20);
+		@include box-sizing(border-box);
+		    border-right: solid 1px #eee;
 
-	p{
-		margin: 0px;
-
-		&.subtitle{
-			@include font-dimensions(22,28);
-			@include flex-margin(0,0,20,0);
+		&:last-child{
+			border-right: none;
 		}
+
+		// &:first-child{
+		// 	width: 45%;
+		// }
 	}
 
-	p.title{
-		@include font-dimensions(60,70);
-	}
-	.divider{
-		@include flex-padding(0,0,20,0);
-    	border-bottom: solid 2px;
-    	@include flex-margin(0,0,20,0);
-    	display: inline-block;
-        @include flex-width(80);
-        color: $dark-pink;
+	.title{
+		font-family: 'franchise_freebold', sans-serif;
+		@include flex-margin(0,0,20,0);
+		@include font-dimensions(22,28);
+		text-transform: uppercase;
+		letter-spacing: 0.1rem;
 	}
 
-	a:first-child{
-		@include flex-padding(0,8,0,0);
+	p, a{
+		margin: 0px;
+		text-decoration: none;
+		@include font-dimensions(27,34);
+		color: $black;
+	}
+	// text-align: center;
+	// @include flex-padding(40,0,80,0);
+	// background-color: rgba(0, 0, 0, 0.75);
+	// color: $white;
+	position: relative;
+	width: 100%;
+	@include flex-height(200);
+
+	.lineBG{
+		background-color: $light-pink;
 	}
 
-	.important{
-		@include font-dimensions(20,30);
-			color: $white;
-			text-decoration: none;
-			font-family: 'Open Sans', sans-serif;
-			letter-spacing: 0.1rem;
-			font-weight: 800;
-			// border-bottom: solid 3px $white;
-	}
+	// p{
+	// 	margin: 0px;
+
+	// 	&.subtitle{
+	// 		@include font-dimensions(22,28);
+	// 		@include flex-margin(0,0,20,0);
+	// 	}
+	// }
+
+	// p.title{
+	// 	@include font-dimensions(60,70);
+	// 	font-family: 'franchise_freebold', sans-serif;
+	// }
+	// .divider{
+	// 	@include flex-padding(0,0,20,0);
+ //    	border-bottom: solid 2px;
+ //    	@include flex-margin(0,0,20,0);
+ //    	display: inline-block;
+ //        @include flex-width(80);
+ //        color: $dark-pink;
+	// }
+
+	// a:first-child{
+	// 	@include flex-padding(0,8,0,0);
+	// }
+
+	// .important{
+	// 	@include font-dimensions(20,30);
+	// 		color: $white;
+	// 		text-decoration: none;
+	// 		font-family: 'Open Sans', sans-serif;
+	// 		letter-spacing: 0.1rem;
+	// 		font-weight: 800;
+	// 		// border-bottom: solid 3px $white;
+	// }
 }
 
 header{
@@ -107,8 +146,23 @@ header{
 	}
 }
 
-.title{
-	font-family: 'franchise_freebold';
+.section_title{
+	margin: 0px;
+	@include flex-padding(90,0,0,0);
+	text-align: center;
+	display: inline-block;
+	@include font-dimensions(86,75);
+	@include flex-margin(0,0,70,0);
+	border-bottom: solid 5px $pink;
+	position: relative;
+	left: 50%;
+	@include translate(-50%,0);
+	letter-spacing: 0.2rem;
+	font-family: 'franchise_freebold', sans-serif;
+}
+
+.clearFix{
+	clear: both;
 }
 
 .button{
@@ -120,7 +174,7 @@ header{
 	border: solid 1px;
 	@include flex-padding(10,20,10,20);
 	display: inline-block;
-	@include transition(background-color, 0.3s, ease-in-out);
+	@include transition(background-color, 0.15s, ease-in-out);
 	cursor: pointer;
 
 	&:hover{
@@ -155,9 +209,9 @@ header{
 		background-color: $light-pink;
 	}
 
-	.line.lineLeft, .line.lineRight{
-		padding: 0px;
-	}
+	// .line.lineLeft, .line.lineRight{
+	// 	padding: 0px;
+	// }
 
 	.intro{
 		left: 50%;
@@ -177,10 +231,19 @@ header{
 }
 
 .team{
-	background-color: $lighter-pink;
-	@include flex-padding(60,130,160,130);
+	// background-color: $lighter-pink;
+	    border-top: solid 1px #eeeeee;
+    border-bottom: solid 1px #eeeeee;
+	@include flex-padding(0,130,160,130);
 	position: relative;
-	overflow: hidden;
+
+	.lineBG{
+		background-color: $light-pink;
+	}
+
+	// .line.lineLeft, .line.lineRight{
+	// 	padding: 0px;
+	// }
 
 	.pattern{
 		width: 100%;
@@ -192,19 +255,18 @@ header{
     	opacity: 0.5;
     	z-index:0;
 	}
-	.section_title{
-		text-align: center;
-		font-family: 'franchise_freebold';
-		@include font-dimensions(90,90);
-		@include flex-margin(40,0,20,0);
-		color: $white;
-		    z-index: 4;
-    position: relative;
+	// .section_title{
+	// 	text-align: center;
+	// 	font-family: 'franchise_freebold';
+	// 	@include font-dimensions(90,90);
+	// 	@include flex-margin(40,0,20,0);
+	// 	    z-index: 4;
+ //    position: relative;
 
-    	// span{
-    	// 	border-bottom: solid 5px $light-pink;
-    	// }
-	}
+ //    	// span{
+ //    	// 	border-bottom: solid 5px $light-pink;
+ //    	// }
+	// }
 
 	.section_subtitle{
 		@include flex-margin(15,30,100,0);
@@ -212,7 +274,7 @@ header{
 		@include flex-width(700);
 		text-align: right;
 		float: right;
-		color: $white;
+		// color: $white;
 		    z-index: 4;
     position: relative;
 	}
@@ -234,15 +296,14 @@ header{
 	min-height: 400px;
 	background-size: cover;
 	position: relative;
-	overflow: hidden;
 
 	.lineBG{
 		background-color: $light-pink;
 	}
 
-	.line.lineLeft, .line.lineRight{
-		padding: 0px;
-	}
+	// .line.lineLeft, .line.lineRight{
+	// 	padding: 0px;
+	// }
 
 	.address{
 		display: inline-block;
@@ -251,11 +312,11 @@ header{
     	@include flex-padding(10,10,10,10);
     	text-align: left;
     	background-color: rgba(0, 0, 0, 0.75);
-    	@include flex-top(96);
+    	@include flex-top(57);
     	@include flex-margin(0,0,0,18);
-    	letter-spacing: 0.15rem;
+    	// letter-spacing: 0.15rem;
     	color: $white;
-    	@include font-dimensions(13,18);
+    	// @include font-dimensions(13,18);
 
 	    .address_cont{
 	    	padding: 20px;
@@ -264,9 +325,11 @@ header{
 
 	    p{
 	    	margin: 0px;
-	    	font-family: 'Open Sans', sans-serif;
-			text-transform: uppercase;
-			font-weight: 800;
+    font-family: 'franchise_freebold', sans-serif;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-size: 26px;
+    line-height: 30px;
 	    }
 	}
 	.pin{
@@ -288,26 +351,26 @@ header{
 		@include flex-padding(0,0,70,0);
 	}
 
-	.title{
-		margin: 0px;
-		@include flex-padding(90,0,0,0);
-		text-align: center;
-		display: inline-block;
-		@include font-dimensions(86,75);
-		@include flex-margin(0,0,70,0);
-		border-bottom: solid 5px $pink;
-		position: relative;
-		left: 50%;
-		@include translate(-50%,0);
-	}
+	// .title{
+	// 	margin: 0px;
+	// 	@include flex-padding(90,0,0,0);
+	// 	text-align: center;
+	// 	display: inline-block;
+	// 	@include font-dimensions(86,75);
+	// 	@include flex-margin(0,0,70,0);
+	// 	border-bottom: solid 5px $pink;
+	// 	position: relative;
+	// 	left: 50%;
+	// 	@include translate(-50%,0);
+	// }
 
 	.lineBG{
 		background-color: $light-pink;
 	}
 
-	.line.lineLeft, .line.lineRight{
-		padding: 0px;
-	}
+	// .line.lineLeft, .line.lineRight{
+	// 	padding: 0px;
+	// }
 
 	.promotion{
 		position: relative;
@@ -319,6 +382,16 @@ header{
 		.promoTitle{
 			@include font-dimensions(30,35);
 			font-weight: 800;
+		}
+
+		.animatedIcon{
+			background-color: $brown;
+		    @include flex-width(200);
+		    @include flex-height(200);
+		    position: relative;
+		    left: 50%;
+		    @include translate(-50%,0);
+		    border-radius: 50%;
 		}
 
 		.date{

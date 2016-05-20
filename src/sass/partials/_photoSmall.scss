@@ -20,10 +20,10 @@
 		}
 
 	.image_info{
-			color: $white;
+			// color: $white;
 			position: absolute;
 			@include flex-top(341);
-			border-right: solid 1px $white;
+			border-right: solid 1px;
     		@include flex-right(60);
     		text-align: right;
 
@@ -31,6 +31,8 @@
 				@include flex-margin(5,20,0,0);
 				font-family: 'franchise_freebold';
 				@include font-dimensions(21,21);
+				    letter-spacing: 0.12rem;
+    text-transform: uppercase;
 			}
 
 			.text{

@@ -50,6 +50,12 @@ class Page extends React.Component {
 	}
   	handleMenuClick = (e) => {
 		this.setState({menuOpened: !this.state.menuOpened});
+		if(!this.state.menuOpened){
+			$('html').css('overflow', 'hidden');
+		}
+		else{
+			$('html').css('overflow', 'scroll');
+		}
 	}
 	handleMenuOver = (e) => {
 		this.setState({menuOver: !this.state.menuOver});
@@ -61,17 +67,15 @@ class Page extends React.Component {
 		return (
 			<div className="app">
 				<Menu opened={this.state.menuOpened}/>
-				<div className="page">
-					<Line position="Left" />
-					<Line position="Right" />
-					<Line position="Top" />
-					<Line position="Bottom" />
-					<Header data={this.state.data.header} menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} menuOpened={this.state.menuOpened} menuPostion={this.state.scrollPosition}/>
-					<Studio data={this.state.data.studio} menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} menuOpened={this.state.menuOpened} menuPostion={this.state.scrollPosition}/>
-					<Team data={this.state.data.team}  menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} menuOpened={this.state.menuOpened} menuPostion={this.state.scrollPosition}/>
-					<Promotions data={this.state.data.promotions}/>
-					<Map menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} menuOpened={this.state.menuOpened} menuPostion={this.state.scrollPosition}/>
-					<Footer data={this.state.data.footer} />
+				<div className='page'>
+					<Header data={this.state.data.header} menuOpened={this.state.menuOpened} menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} menuPostion={this.state.scrollPosition}/>
+					<div className="menuicon_container">
+						<Studio data={this.state.data.studio}/>
+						<Team data={this.state.data.team}/>
+						<Promotions data={this.state.data.promotions}/>
+						<Map />
+						<Footer data={this.state.data.footer} menuOpened={this.state.menuOpened} menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} menuPostion={this.state.scrollPosition}/>
+					</div>
 				</div>
 			</div>
 			);

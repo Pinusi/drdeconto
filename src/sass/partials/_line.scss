@@ -3,37 +3,37 @@
 		box-sizing: border-box;
 		z-index: 200;
 
-		&.lineLeft{
-		    height: 100%;
-		    width: 1px;
-		    left: 30px;
-		    padding-top: 30px;
-		    padding-bottom: 30px;
-		}
+		// &.lineLeft{
+		//     height: 100%;
+		//     width: 1px;
+		//     left: 30px;
+		//     padding-top: 30px;
+		//     padding-bottom: 30px;
+		// }
 
 		&.lineRight{
 		    height: 100%;
 		    width: 1px;
 		    right: 30px;
-		    padding-top: 30px;
-		    padding-bottom: 30px;
+		    // padding-top: 30px;
+		    // padding-bottom: 30px;
 		}
 
-		&.lineTop{
-		    width: 100%;
-		    height: 1px;
-		    top: 30px;
-		    padding-left: 30px;
-		    padding-right: 30px;
-		}
+		// &.lineTop{
+		//     width: 100%;
+		//     height: 1px;
+		//     top: 30px;
+		//     padding-left: 30px;
+		//     padding-right: 30px;
+		// }
 
-		&.lineBottom{
-		    width: 100%;
-		    height: 1px;
-		    bottom: 30px;
-		    padding-left: 30px;
-		    padding-right: 30px;
-		}
+		// &.lineBottom{
+		//     width: 100%;
+		//     height: 1px;
+		//     bottom: 30px;
+		//     padding-left: 30px;
+		//     padding-right: 30px;
+		// }
 	}
 
 	.lineBG{
