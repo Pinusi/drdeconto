@@ -1,10 +1,11 @@
 import React from 'react';
+import $ from 'jquery';
 import MenuButton from './MenuButton';
 import Arrow from './icons/Arrow';
-import $ from 'jquery';
+import Line from './Line';
+import BigLine from './BigLine';
 import ScrollMagic from 'ScrollMagic';
 import 'animation.gsap';
-import Line from './Line';
 import 'debug.addIndicators';
 import TimelineMax from 'TimelineMax';
 import logo from "../../../assets/imgs/logo.png";
@@ -30,12 +31,18 @@ class Header extends React.Component {
 		});
 	}
 	render() {
-		let divStyle = {
-			top: this.props.menuPostion+65
+		let pagePercentage=(this.props.scrollPosition/($(document).height() - $(window).height()))*100
+		let menuStyle = {
+			top: this.props.scrollPosition+65
+		};
+		let lineStyle = {
+			top: this.props.scrollPosition,
+			height: pagePercentage + 'vh'
 		};
 		return <header ref={(ref) => this.header = ref}>
+					<BigLine position={lineStyle}/>
 					<Line position="Right" />
-					<MenuButton menuClick={this.props.menuClick} menuOver={this.props.menuOver} menuOpened={this.props.menuOpened} position={divStyle} menuOvered={this.props.menuOvered}/>
+					<MenuButton menuClick={this.props.menuClick} menuOver={this.props.menuOver} menuOpened={this.props.menuOpened} position={menuStyle} menuOvered={this.props.menuOvered}/>
 					<div ref={(ref) => this.logo = ref} className="logo">
 						<img src={ logo }/>
 						<a ref={(ref) => this.contact = ref} className='button'>contattaci</a>

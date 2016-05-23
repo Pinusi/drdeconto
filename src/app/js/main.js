@@ -68,13 +68,13 @@ class Page extends React.Component {
 			<div className="app">
 				<Menu opened={this.state.menuOpened}/>
 				<div className='page'>
-					<Header data={this.state.data.header} menuOpened={this.state.menuOpened} menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} menuPostion={this.state.scrollPosition}/>
+					<Header data={this.state.data.header} menuOpened={this.state.menuOpened} menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} scrollPosition={this.state.scrollPosition}/>
 					<div className="menuicon_container">
 						<Studio data={this.state.data.studio}/>
 						<Team data={this.state.data.team}/>
 						<Promotions data={this.state.data.promotions}/>
 						<Map />
-						<Footer data={this.state.data.footer} menuOpened={this.state.menuOpened} menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} menuPostion={this.state.scrollPosition}/>
+						<Footer data={this.state.data.footer} menuOpened={this.state.menuOpened} menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} scrollPosition={this.state.scrollPosition}/>
 					</div>
 				</div>
 			</div>

@@ -34,9 +34,15 @@
 		//     padding-left: 30px;
 		//     padding-right: 30px;
 		// }
-	}
+}
 
-	.lineBG{
-		background-color: $white;
-		height: 100%;
-	}
+.bigline{
+	position: absolute;
+    width: 5px;
+    @include flex-right(37);
+}
+
+.lineBG{
+	background-color: $white;
+	height: 100%;
+}

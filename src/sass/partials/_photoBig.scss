@@ -3,6 +3,11 @@
 		left: 50%;
 		@include translate(-65%,0);
 		display: inline-block;
+
+		.image_big_container{
+			position: relative;
+			top: 0px;
+		}
 		
 		.image_image{
 			@include flex-width(700);

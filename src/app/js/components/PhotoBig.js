@@ -11,23 +11,30 @@ class PhotoBig extends React.Component {
 		this.animationController = new ScrollMagic.Controller();
 		let height = $(this.img).height() + 150;
 
-		// build tween
+		// parallax
 		var tween = TweenMax.from(this.img, 1, {backgroundPosition: "50% 50%", ease: Linear.easeNone});
-
-		// build scene
 		var scene = new ScrollMagic.Scene({triggerElement: this.img, duration: height, offset: -50})
 						.setTween(tween)
+						.addTo(this.animationController);
+
+		// animationfrom below
+		var tween = TweenMax.from(this.imgcontainer, 2, {top:"70px", ease: Linear.easeNone, delay:0.5});
+		var scene = new ScrollMagic.Scene({triggerElement: this.imgbig, triggerHook: "onEnter", duration: 0, offset: 20})
+						.setTween(tween)
+						.addIndicators()
 						.addTo(this.animationController);
 	}
 	render() {
 		let divStyle = {
   			backgroundImage: 'url(' + this.props.photo_src + ')'
 		};
-		return <div className="image_big">
-					<div className="image_image" ref={(ref) => this.img = ref} style={divStyle}></div>
-					<div className="image_info">
-						<p className="text">{this.props.photo_txt}</p>
-						<p className="header">{this.props.photo_header}</p>
+		return <div className="image_big" ref={(ref) => this.imgbig = ref}>
+					<div className="image_big_container" ref={(ref) => this.imgcontainer = ref}>
+						<div className="image_image" ref={(ref) => this.img = ref} style={divStyle}></div>
+						<div className="image_info">
+							<p className="text">{this.props.photo_txt}</p>
+							<p className="header">{this.props.photo_header}</p>
+						</div>
 					</div>
 				</div>;
 	}
