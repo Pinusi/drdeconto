@@ -9,19 +9,18 @@ import logo from "../../../assets/imgs/logo.png";
 class PhotoBig extends React.Component {
 	componentDidMount() {
 		this.animationController = new ScrollMagic.Controller();
-		let height = $(this.img).height() + 150;
+		let height = $(this.img).height() + 700;
 
 		// parallax
 		var tween = TweenMax.from(this.img, 1, {backgroundPosition: "50% 50%", ease: Linear.easeNone});
-		var scene = new ScrollMagic.Scene({triggerElement: this.img, duration: height, offset: -50})
+		var scene = new ScrollMagic.Scene({triggerElement: this.img, triggerHook: "onEnter", duration: height, offset: -50})
 						.setTween(tween)
 						.addTo(this.animationController);
 
 		// animationfrom below
-		var tween = TweenMax.from(this.imgcontainer, 2, {top:"70px", ease: Linear.easeNone, delay:0.5});
+		var tween = TweenMax.from(this.imgcontainer, 0.5, {top:"50px", opacity: 0, ease: Power1.easeIn});
 		var scene = new ScrollMagic.Scene({triggerElement: this.imgbig, triggerHook: "onEnter", duration: 0, offset: 20})
 						.setTween(tween)
-						.addIndicators()
 						.addTo(this.animationController);
 	}
 	render() {
