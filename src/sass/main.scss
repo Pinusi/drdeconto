@@ -32,7 +32,9 @@ footer{
 		@include flex-height(200);
 		@include flex-padding(20,20,20,20);
 		@include box-sizing(border-box);
-		    border-right: solid 1px #eee;
+	    border-right: solid 1px #000;
+	    position: relative;
+    	z-index: 2;
 
 		&:last-child{
 			border-right: none;
@@ -41,6 +43,29 @@ footer{
 		// &:first-child{
 		// 	width: 45%;
 		// }
+	}
+
+	.logo{
+		background-image: url('../assets/imgs/logo_black.png');
+		@include flex-width(280);
+	    @include flex-height(78);
+	    background-size: cover;
+	    left: 50%;
+	    top: 50%;
+		position: absolute;
+		@include translate(-50%,-50%);
+	}
+
+	.tooth{
+		background-image: url('../assets/imgs/tooth.png');
+		background-size: cover;
+	    @include flex-width(241);
+	    @include flex-height(320);
+	    position: absolute;
+	    @include flex-left(237);
+	    @include flex-top(-65);
+	    opacity: 0.8;
+	    z-index: 0;
 	}
 
 	.title{
@@ -142,7 +167,7 @@ header{
 
 	.arrow{
 		text-align: center;
-		fill: $pink;
+		fill: $light-pink;
 	}
 }
 
@@ -153,7 +178,7 @@ header{
 	display: inline-block;
 	@include font-dimensions(86,75);
 	@include flex-margin(0,0,70,0);
-	border-bottom: solid 5px $pink;
+	border-bottom: solid 5px $light-pink;
 	position: relative;
 	left: 50%;
 	@include translate(-50%,0);
@@ -213,6 +238,14 @@ header{
 	// 	padding: 0px;
 	// }
 
+	.utensils{
+		background: url('../assets/imgs/utensils.png') repeat;
+		background-size: cover;
+		@include flex-width(150);
+	    @include flex-height(100);
+	    position: absolute;
+	}
+
 	.intro{
 		left: 50%;
 		display: inline-block;
@@ -221,6 +254,7 @@ header{
 		@include flex-margin(140,0,140,0);
 		@include flex-width(700);
 		@include font-dimensions(33,45);
+		@include flex-padding(0,0,0,60);
 	}
 
 	.desc{
@@ -232,10 +266,11 @@ header{
 
 .team{
 	// background-color: $lighter-pink;
-	    border-top: solid 1px #eeeeee;
+	border-top: solid 1px #eeeeee;
     border-bottom: solid 1px #eeeeee;
 	@include flex-padding(0,130,160,130);
 	position: relative;
+	// background: url('../assets/imgs/pattern_2.jpg') repeat;
 
 	.lineBG{
 		background-color: $light-pink;
@@ -248,11 +283,12 @@ header{
 	.pattern{
 		width: 100%;
 		height: 100%;
-		background: url('../assets/imgs/pattern.png') repeat;
+		background: url('../assets/imgs/pattern_10.jpg') repeat;
+		background-size: 150px 150px;
 		position: absolute;
     	top: 0px;
     	left: 0px;
-    	opacity: 0.5;
+    	// opacity: 0.2;
     	z-index:0;
 	}
 	// .section_title{
@@ -275,8 +311,8 @@ header{
 		text-align: right;
 		float: right;
 		// color: $white;
-		    z-index: 4;
-    position: relative;
+		z-index: 4;
+    	position: relative;
 	}
 
 	.clear{
@@ -320,7 +356,7 @@ header{
 
 	    .address_cont{
 	    	padding: 20px;
-	    	border: solid 1px $pink;
+	    	border: solid 1px $light-pink;
 	    }
 
 	    p{

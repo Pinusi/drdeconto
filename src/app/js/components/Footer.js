@@ -18,10 +18,11 @@ class Footer extends React.Component {
 		};
 		return (
 			<footer>
+				<div className="tooth"></div>
 				<BigLine position={lineStyle}/>
 				<Line position="Right" />
 				<MenuButton menuClick={this.props.menuClick} menuOver={this.props.menuOver} menuOpened={this.props.menuOpened} position={menuStyle} menuOvered={this.props.menuOvered}/>	
-				<div className="box">Logo</div>
+				<div className="box"><div className="logo"></div></div>
 				<div className="box">
 					<p className="title">Contatti</p>
 					<a href='mailto:dr.deconto@gmail.com'>dr.deconto@gmail.com</a>

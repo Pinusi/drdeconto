@@ -18,7 +18,10 @@ class Studio extends React.Component {
 	render() {
 		return <div id="studio" className="studio">
 					<Line position="Right" />
-					<div className="intro">{this.props.data.intro}</div>
+					<div className="intro">
+						<div className="utensils"></div>
+						{this.props.data.intro}
+					</div>
 					<PhotoBig photo_src={photo_one} photo_txt={this.props.data.photo_txt} photo_header={this.props.data.photo_header}/>
 					<div className="desc">{this.props.data.text}</div>
 				</div>;

@@ -12,6 +12,7 @@ class Team extends React.Component {
 		var teamMembers = this.props.data.members ? this.props.data.members : [];
 		let photos = [photo_0, photo_1, photo_2, photo_3];
 		return <div id="team" className="team">
+			<div className="pattern"></div>
 			<Line position="Right" />
 			<div className="section_title"><span>{this.props.data.title}</span></div>
 			<div className="clearFix"></div>
@@ -22,7 +23,7 @@ class Team extends React.Component {
 						return <div className="clear"><PhotoBig key={i} photo_src={photos[i]} photo_txt={member.position} photo_header={member.name}/></div>
 					}
 					else{
-						return <PhotoSmall key={i} photo_src={photos[i]} photo_txt={member.position} photo_header={member.name}/>
+						return <PhotoSmall key={i} sequence={i-1} photo_src={photos[i]} photo_txt={member.position} photo_header={member.name}/>
 					}
 		        })}
 		        <div className="clearFix"></div>
