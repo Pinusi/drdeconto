@@ -21,6 +21,16 @@ body{
 	font-family: 'Gentium Book Basic', serif;
 }
 
+html{
+	font-size: 80%;
+}
+
+@media (min-width: 1000px) {
+    	html {
+      		font-size: 100%; 
+      	} 
+     }
+
 .page{
 	position: relative;
 }
@@ -222,6 +232,7 @@ header{
 		@include translate(-50%,0);
 		position: relative;
 		@include flex-margin(20,0,0,0);
+		letter-spacing: 0.15rem;
 	}
 }
 
@@ -244,6 +255,8 @@ header{
 		@include flex-width(150);
 	    @include flex-height(100);
 	    position: absolute;
+	    left: -5px;
+    	@include flex-top(5);
 	}
 
 	.intro{
@@ -254,7 +267,7 @@ header{
 		@include flex-margin(140,0,140,0);
 		@include flex-width(700);
 		@include font-dimensions(33,45);
-		@include flex-padding(0,0,0,60);
+		@include flex-padding(0,0,0,164);
 	}
 
 	.desc{
