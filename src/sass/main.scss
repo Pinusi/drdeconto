@@ -4,6 +4,8 @@ COMMON VARIABLES
 $rem: 16;
 $default_font_size: 12;
 $default_line_height: 17;
+$max-mobile: 400px;
+$max-tablet: 1000px;
 
 /*General*/
 @import '../../vendor/bower_components/normalize-scss/normalize';
@@ -17,19 +19,45 @@ $default_line_height: 17;
 @import 'partials/photoSmall';
 @import 'partials/line';
 
+
 body{
 	font-family: 'Gentium Book Basic', serif;
 }
 
 html{
-	font-size: 80%;
+	font-size: 100%; 
 }
 
-@media (min-width: 1000px) {
-    	html {
-      		font-size: 100%; 
-      	} 
-     }
+// @include breakpoint(tablet-or-smaller) {
+//     	html {
+//       		font-size: 80%;
+//       	}
+
+//       	.team .section_photos{
+//       		margin: 0px !important;
+//       	}
+//      }
+
+// @include breakpoint(small-phone) {
+// 	header .logo{
+// 		width: 90% !important;
+// 	}
+
+// 	.line,  .bigline{
+// 	      		display: none;
+// 	      	} 
+// 	.button{
+// 	      	@include font-dimensions(11,13);
+// 	      	letter-spacing: 0.05rem !important;
+// 	      }
+// 	.studio{
+// 		padding: 40px;
+// 		.intro{
+// 			width: 100%;
+//     padding: 0px;
+// 		}
+// 	}
+// }
 
 .page{
 	position: relative;
@@ -70,7 +98,7 @@ footer{
 		background-image: url('../assets/imgs/tooth.png');
 		background-size: cover;
 	    @include flex-width(241);
-	    @include flex-height(320);
+	    height: 320px;
 	    position: absolute;
 	    @include flex-left(237);
 	    @include flex-top(-65);
@@ -142,6 +170,7 @@ footer{
 }
 
 header{
+
 	background-image: url('../assets/imgs/test_5.jpg');
 	background-position: 50% 50%;
 	height: 100vh;
@@ -153,7 +182,7 @@ header{
 		img{
 			width: 100%;
 		}
-		width: 60%;
+		@include flex-width(600);
 		@include translate(-50%,-50%);
 		left: 50%;
 		position: absolute;
@@ -453,6 +482,117 @@ header{
 			display: inline-block;
 			@include flex-padding(0,7,0,7);
 		}
+	}
+}
+
+@include breakpoint(tablet-or-smaller) {
+    	html {
+      		font-size: 80%;
+      	}
+
+      	.team .section_photos{
+      		margin: 0px !important;
+      	}
+     }
+
+@include breakpoint(small-phone) {
+	header .logo{
+		width: 90% !important;
+	}
+
+	.line,  .bigline{
+	      		display: none;
+	      	} 
+	.button{
+	      	@include font-dimensions(11,13);
+	      	letter-spacing: 0.05rem !important;
+	}
+	.studio{
+		padding: 0px;
+		.intro{
+			width: 100%;
+    padding: 0px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    span{
+    	display: block;
+    margin-top: 40px;
+padding: 40px;}
+		}
+		.utensils{
+    	position: relative;
+    	top: 0px;
+    	left: 50%;
+		@include translate(-50%,0);
+    }
+    }
+
+    .image_big{
+    	    width: 100%;
+    	    left: 0px;
+    transform: none;
+    .image_image{
+    	width: 100%;
+    }
+    }
+
+    .image_big .image_info{
+    	    left: 40px;
+    top: 0px;
+    border: none;
+    border-left: solid 1px;
+    position: relative;
+    padding-top: 20px;
+        width: 300px;
+    }
+
+    .studio .desc{
+    	    width: 100%;
+    margin: 0px;
+    padding: 40px;
+    box-sizing: border-box;
+    }
+
+    footer{
+    	height: auto;
+    	.box{
+    		float: none;
+   			 width: 100%;
+    border: none;
+    border-top: solid 1px;
+    	}
+    }
+
+    .team{
+    	padding: 0px;
+    	.section_subtitle{
+    		width: 100%;
+    		margin: 0px;
+    padding: 20px;
+    box-sizing: border-box;
+    	}
+    }
+
+    .map{
+    	.address{
+    		    left: 0px;
+    	}
+    }
+
+    .promotions{
+    	padding: 20px;
+
+    	.section_title{
+    		margin-bottom: 20px;
+    		padding-top: 0px;
+    	}
+    	.promotions_inner{
+    		padding: 0px;
+    	}
+	    .promotion{
+	    	padding-top: 20px;
+	    	    width: 100%;
+	    }
 	}
 }
 
