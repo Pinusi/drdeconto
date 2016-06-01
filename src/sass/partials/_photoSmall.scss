@@ -2,18 +2,18 @@
 	position: relative;
     width: 33%;
     float: left;
-    padding: 20px;
+    @include flex-padding(20,20,20,20);
     box-sizing: border-box;
 
+    &:first-child{
+			display: none;
+		}
+		
     .image_image{
 			width: 100%;
 			@include flex-height(320);
 			overflow: hidden;
 			position: relative;
-			// border-radius: 9px 0px 9px 0px;
-    		// border: solid 1px transparent;
-    		// border-bottom: solid 3px $white;
-    		// border-right: solid 3px $white;
     		background-position: 50% 0%;
     		background-size: cover;
     		background-repeat: no-repeat;
@@ -31,8 +31,8 @@
 				@include flex-margin(5,20,0,0);
 				font-family: 'franchise_freebold';
 				@include font-dimensions(21,21);
-				    letter-spacing: 0.12rem;
-    text-transform: uppercase;
+				letter-spacing: 0.12rem;
+    			text-transform: uppercase;
 			}
 
 			.text{

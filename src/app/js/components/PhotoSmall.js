@@ -28,7 +28,7 @@ class PhotoSmall extends React.Component {
 		let divStyle = {
   			backgroundImage: 'url(' + this.props.photo_src + ')'
 		};
-		return <div className="image_small" ref={(ref) => this.imgcontainer = ref}>
+		return <div className={'image_small' + (this.props.displaySmall ? ' onlySmall' : '')} ref={(ref) => this.imgcontainer = ref}>
 					<div className="image_image" ref={(ref) => this.img = ref} style={divStyle}></div>
 					<div className="image_info">
 						<p className="text">{this.props.photo_txt}</p>

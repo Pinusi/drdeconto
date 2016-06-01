@@ -20,7 +20,7 @@ class Team extends React.Component {
 			<div className="section_photos">
 				{teamMembers.map(function(member, i) {
 					if(i == 0){
-						return <div className="clear"><PhotoBig key={i} photo_src={photos[i]} photo_txt={member.position} photo_header={member.name}/></div>
+						return <div className="clear"><PhotoBig photo_src={photos[i]} photo_txt={member.position} photo_header={member.name}/><PhotoSmall displaySmall="True" key={i} sequence={i-1} photo_src={photos[i]} photo_txt={member.position} photo_header={member.name}/></div>
 					}
 					else{
 						return <PhotoSmall key={i} sequence={i-1} photo_src={photos[i]} photo_txt={member.position} photo_header={member.name}/>

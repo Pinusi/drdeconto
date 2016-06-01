@@ -318,6 +318,10 @@ header{
 		background-color: $light-pink;
 	}
 
+	.onlySmall{
+		display: none;
+	}
+
 	// .line.lineLeft, .line.lineRight{
 	// 	padding: 0px;
 	// }
@@ -485,6 +489,82 @@ header{
 	}
 }
 
+@include breakpoint(1174) {
+	.team{
+		.image_small{
+			@include flex-padding(20,10,20,10);
+		}
+
+		.section_photos{
+			margin: 0px;
+		}
+	}
+}
+
+@include breakpoint(852) {
+	.studio{
+		@include flex-padding(20,20,20,20);
+
+		.intro{
+			width: 100%;
+			padding: 0px;
+			@include flex-margin(60,0,40,0);
+			
+			span{
+				display: block;
+				@include flex-padding(40,40,0,40);
+			}
+		}
+			
+		.utensils{
+			position: relative;
+			top: 0px;
+			left: 50%;
+			@include translate(-50%,0);
+		}
+	}
+}
+
+@include breakpoint(760) {
+	.promotions{
+		@include flex-padding(50,50,50,50);
+
+		.section_title{
+			@include flex-margin(20,0,20,0);
+			padding-top: 0px;
+		}
+		.promotions_inner{
+			padding: 0px;
+		}
+		.promotion{
+			@include flex-padding(20,20,0,0);
+			width: 50%;
+		}
+	}
+}
+
+@include breakpoint(500) {
+	.promotions{
+		@include flex-padding(30,30,30,30);
+
+
+		.promotion{
+			@include flex-padding(20,0,0,0);
+			width: 100%;
+		}
+	}
+}
+
+@include breakpoint(558) {
+	.line,  .bigline{
+		display: none;
+	}
+
+	header .logo{
+		width: 90%;
+	}
+}
+
 @include breakpoint(tablet-or-smaller) {
     	html {
       		font-size: 80%;
@@ -496,103 +576,142 @@ header{
      }
 
 @include breakpoint(small-phone) {
-	header .logo{
-		width: 90% !important;
+
+	.button{
+		@include font-dimensions(11,13);
+		letter-spacing: 0.05rem;
 	}
 
-	.line,  .bigline{
-	      		display: none;
-	      	} 
-	.button{
-	      	@include font-dimensions(11,13);
-	      	letter-spacing: 0.05rem !important;
-	}
 	.studio{
 		padding: 0px;
-		.intro{
+	}
+
+	// .studio{
+	// 	padding: 0px;
+
+	// 	.intro{
+	// 		width: 100%;
+	// 		padding: 0px;
+	// 		@include flex-margin(60,0,40,0);
+			
+	// 		span{
+	// 			display: block;
+	// 			@include flex-padding(40,40,0,40);
+	// 		}
+	// 	}
+			
+	// 	.utensils{
+	// 		position: relative;
+	// 		top: 0px;
+	// 		left: 50%;
+	// 		@include translate(-50%,0);
+	// 	}
+	// }
+
+	.image_big{
+		width: 100%;
+		left: 0px;
+		transform: none;
+		
+		.image_image{
 			width: 100%;
-    padding: 0px;
-    margin-top: 60px;
-    margin-bottom: 40px;
-    span{
-    	display: block;
-    margin-top: 40px;
-padding: 40px;}
 		}
-		.utensils{
-    	position: relative;
-    	top: 0px;
-    	left: 50%;
-		@include translate(-50%,0);
-    }
-    }
+		
+		.image_info{
+			@include flex-left(40);
+			top: 0px;
+			border: none;
+			border-left: solid 1px;
+			position: relative;
+			@include flex-padding(15,40,0,0);
+			@include flex-width(300);
+		}
+	}
 
-    .image_big{
-    	    width: 100%;
-    	    left: 0px;
-    transform: none;
-    .image_image{
-    	width: 100%;
-    }
-    }
+	.studio .desc{
+		width: 100%;
+		margin: 0px;
+		@include flex-padding(40,40,40,40);
+		box-sizing: border-box;
+	}
 
-    .image_big .image_info{
-    	    left: 40px;
-    top: 0px;
-    border: none;
-    border-left: solid 1px;
-    position: relative;
-    padding-top: 20px;
-        width: 300px;
-    }
+	footer{
+		height: auto;
+		
+		.box{
+			float: none;
+			width: 100%;
+			border: none;
+			border-top: solid 1px;
+		}
+	}
 
-    .studio .desc{
-    	    width: 100%;
-    margin: 0px;
-    padding: 40px;
-    box-sizing: border-box;
-    }
+	.team{
+		@include flex-padding(30,30,30,30);
 
-    footer{
-    	height: auto;
-    	.box{
-    		float: none;
-   			 width: 100%;
-    border: none;
-    border-top: solid 1px;
-    	}
-    }
+		.onlySmall{
+			display: block;
+		}
 
-    .team{
-    	padding: 0px;
-    	.section_subtitle{
-    		width: 100%;
-    		margin: 0px;
-    padding: 20px;
-    box-sizing: border-box;
-    	}
-    }
+		.section_subtitle{
+			width: 100%;
+			margin: 0px;
+			@include flex-padding(10,10,10,10);
+			box-sizing: border-box;
+		}
 
-    .map{
-    	.address{
-    		    left: 0px;
-    	}
-    }
+		.clear{
+			margin: 0px;
+		}
+		.section_title{
+			@include flex-margin(20,0,20,0);
+			padding-top: 0px;
+		}
 
-    .promotions{
-    	padding: 20px;
+		.image_big{
+			display: none;
+		}
 
-    	.section_title{
-    		margin-bottom: 20px;
-    		padding-top: 0px;
-    	}
-    	.promotions_inner{
-    		padding: 0px;
-    	}
-	    .promotion{
-	    	padding-top: 20px;
-	    	    width: 100%;
-	    }
+		.image_small{
+			padding: 0px;
+			width: 100%;
+			@include flex-margin(20,0,0,0);
+
+			.image_image{
+				@include flex-width(100);
+				@include flex-height(100);
+				border-radius: 50%;
+				background-position: 50% 0%;
+				z-index: 2;
+			}
+
+			.image_info{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				right: auto;
+				width: 100%;
+				border-right: none;
+				@include flex-padding(0,0,10,30);
+				text-align: left;
+				box-sizing: border-box;
+
+				.text{
+					@include flex-padding(0,0,0,90);
+				}
+
+				.header{
+					border-bottom: solid 1px;
+					@include flex-padding(0,0,10,90);
+				}
+			}
+		}
+	}
+
+	.map{
+		.address{
+			left: 0px;
+		}
 	}
 }
 
