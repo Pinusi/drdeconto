@@ -66,7 +66,7 @@ class Page extends React.Component {
 	render() {
 		return (
 			<div className="app">
-				<Menu opened={this.state.menuOpened}/>
+				<Menu menuClick={this.handleMenuClick} opened={this.state.menuOpened}/>
 				<div className='page'>
 					<Header data={this.state.data.header} menuOpened={this.state.menuOpened} menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} scrollPosition={this.state.scrollPosition}/>
 					<div className="menuicon_container">

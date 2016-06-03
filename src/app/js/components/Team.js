@@ -11,7 +11,7 @@ class Team extends React.Component {
 	render() {
 		var teamMembers = this.props.data.members ? this.props.data.members : [];
 		let photos = [photo_0, photo_1, photo_2, photo_3];
-		return <div id="team" className="team">
+		return <div id="team" className="team section">
 			<div className="pattern"></div>
 			<Line position="Right" />
 			<div className="section_title"><span>{this.props.data.title}</span></div>

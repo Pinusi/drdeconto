@@ -19,7 +19,7 @@ class Studio extends React.Component {
 		TweenMax.from(this.utensils, 10, {rotation:-360, transformOrigin:"50% 50%", repeat:-1, ease: Linear.easeNone});
 	}
 	render() {
-		return <div id="studio" className="studio">
+		return <div id="studio" className="studio section">
 					<Line position="Right" />
 					<div className="intro">
 						<div className="utensils" ref={(ref) => this.utensils = ref}></div>

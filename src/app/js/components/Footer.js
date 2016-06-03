@@ -10,10 +10,10 @@ class Footer extends React.Component {
 	render() {
 		let pagePercentage=(this.props.scrollPosition/($(document).height() - $(window).height()))*100
 		let menuStyle = {
-			top: this.props.scrollPosition-$("header").height()-$("#studio").height()-$("#team").outerHeight()-$("#promotions").outerHeight()-$("#map").outerHeight()+65
+			top: this.props.scrollPosition-$("header").height()-$("#studio").height()-$("#team").outerHeight()-$("#promotions").height()-$("#map").height()+65
 		};
 		let lineStyle = {
-			top: this.props.scrollPosition-$("header").height()-$("#studio").height()-$("#team").outerHeight()-$("#promotions").outerHeight()-$("#map").outerHeight(),
+			top: this.props.scrollPosition-$("header").height()-$("#studio").height()-$("#team").outerHeight()-$("#promotions").height()-$("#map").height(),
 			height: pagePercentage + 'vh'
 		};
 		return (
@@ -22,7 +22,7 @@ class Footer extends React.Component {
 				<BigLine position={lineStyle}/>
 				<Line position="Right" />
 				<MenuButton menuClick={this.props.menuClick} menuOver={this.props.menuOver} menuOpened={this.props.menuOpened} position={menuStyle} menuOvered={this.props.menuOvered}/>	
-				<div className="box"><div className="logo"></div></div>
+				<div className="box withlogo"><div className="logo"></div></div>
 				<div className="box">
 					<p className="title">Contatti</p>
 					<a href='mailto:dr.deconto@gmail.com'>dr.deconto@gmail.com</a>

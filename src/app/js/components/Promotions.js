@@ -4,7 +4,7 @@ import Line from './Line';
 class Promotions extends React.Component {
 	render() {
 		let promotions = this.props.data.list ? this.props.data.list : [];
-		return <div className="promotions" id="promotions">
+		return <div className="promotions section" id="promotions">
 					<Line position="Right" />
 					<p className="section_title">{this.props.data.title}</p>
 					<div className="promotions_inner">

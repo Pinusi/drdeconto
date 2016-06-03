@@ -2,7 +2,7 @@
 	position: relative;
     width: 33%;
     float: left;
-    @include flex-padding(20,20,20,20);
+    @include flex-padding(0,20,100,20);
     box-sizing: border-box;
 
     &:first-child{
@@ -22,7 +22,7 @@
 	.image_info{
 			// color: $white;
 			position: absolute;
-			@include flex-top(341);
+			@include flex-top(320);
 			border-right: solid 1px;
     		@include flex-right(60);
     		text-align: right;

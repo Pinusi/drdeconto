@@ -28,42 +28,20 @@ html{
 	font-size: 100%; 
 }
 
-// @include breakpoint(tablet-or-smaller) {
-//     	html {
-//       		font-size: 80%;
-//       	}
-
-//       	.team .section_photos{
-//       		margin: 0px !important;
-//       	}
-//      }
-
-// @include breakpoint(small-phone) {
-// 	header .logo{
-// 		width: 90% !important;
-// 	}
-
-// 	.line,  .bigline{
-// 	      		display: none;
-// 	      	} 
-// 	.button{
-// 	      	@include font-dimensions(11,13);
-// 	      	letter-spacing: 0.05rem !important;
-// 	      }
-// 	.studio{
-// 		padding: 40px;
-// 		.intro{
-// 			width: 100%;
-//     padding: 0px;
-// 		}
-// 	}
-// }
-
 .page{
 	position: relative;
 }
 
+.section{
+	@include flex-padding(0,160,0,160);
+	position: relative;
+}
+
 footer{
+	position: relative;
+	width: 100%;
+	@include flex-height(200);
+
 	.box{
 		float: left;
 		width: 30%;
@@ -77,10 +55,6 @@ footer{
 		&:last-child{
 			border-right: none;
 		}
-
-		// &:first-child{
-		// 	width: 45%;
-		// }
 	}
 
 	.logo{
@@ -98,7 +72,7 @@ footer{
 		background-image: url('../assets/imgs/tooth.png');
 		background-size: cover;
 	    @include flex-width(241);
-	    height: 320px;
+	    @include flex-height(390);
 	    position: absolute;
 	    @include flex-left(237);
 	    @include flex-top(-65);
@@ -120,57 +94,13 @@ footer{
 		@include font-dimensions(27,34);
 		color: $black;
 	}
-	// text-align: center;
-	// @include flex-padding(40,0,80,0);
-	// background-color: rgba(0, 0, 0, 0.75);
-	// color: $white;
-	position: relative;
-	width: 100%;
-	@include flex-height(200);
 
 	.lineBG{
 		background-color: $light-pink;
 	}
-
-	// p{
-	// 	margin: 0px;
-
-	// 	&.subtitle{
-	// 		@include font-dimensions(22,28);
-	// 		@include flex-margin(0,0,20,0);
-	// 	}
-	// }
-
-	// p.title{
-	// 	@include font-dimensions(60,70);
-	// 	font-family: 'franchise_freebold', sans-serif;
-	// }
-	// .divider{
-	// 	@include flex-padding(0,0,20,0);
- //    	border-bottom: solid 2px;
- //    	@include flex-margin(0,0,20,0);
- //    	display: inline-block;
- //        @include flex-width(80);
- //        color: $dark-pink;
-	// }
-
-	// a:first-child{
-	// 	@include flex-padding(0,8,0,0);
-	// }
-
-	// .important{
-	// 	@include font-dimensions(20,30);
-	// 		color: $white;
-	// 		text-decoration: none;
-	// 		font-family: 'Open Sans', sans-serif;
-	// 		letter-spacing: 0.1rem;
-	// 		font-weight: 800;
-	// 		// border-bottom: solid 3px $white;
-	// }
 }
 
 header{
-
 	background-image: url('../assets/imgs/test_5.jpg');
 	background-position: 50% 50%;
 	height: 100vh;
@@ -266,17 +196,10 @@ header{
 }
 
 .studio{
-	@include flex-padding(0,160,0,160);
-	position: relative;
-	overflow: hidden;
 
 	.lineBG{
 		background-color: $light-pink;
 	}
-
-	// .line.lineLeft, .line.lineRight{
-	// 	padding: 0px;
-	// }
 
 	.utensils{
 		background: url('../assets/imgs/utensils.png') repeat;
@@ -300,19 +223,15 @@ header{
 	}
 
 	.desc{
-		@include flex-margin(100,0,100,0);
+		@include flex-padding(100,0,100,0);
 		@include font-dimensions(20,28);
 		@include flex-width(700);
 	}
 }
 
 .team{
-	// background-color: $lighter-pink;
 	border-top: solid 1px #eeeeee;
     border-bottom: solid 1px #eeeeee;
-	@include flex-padding(0,130,160,130);
-	position: relative;
-	// background: url('../assets/imgs/pattern_2.jpg') repeat;
 
 	.lineBG{
 		background-color: $light-pink;
@@ -322,10 +241,6 @@ header{
 		display: none;
 	}
 
-	// .line.lineLeft, .line.lineRight{
-	// 	padding: 0px;
-	// }
-
 	.pattern{
 		width: 100%;
 		height: 100%;
@@ -334,21 +249,8 @@ header{
 		position: absolute;
     	top: 0px;
     	left: 0px;
-    	// opacity: 0.2;
     	z-index:0;
 	}
-	// .section_title{
-	// 	text-align: center;
-	// 	font-family: 'franchise_freebold';
-	// 	@include font-dimensions(90,90);
-	// 	@include flex-margin(40,0,20,0);
-	// 	    z-index: 4;
- //    position: relative;
-
- //    	// span{
- //    	// 	border-bottom: solid 5px $light-pink;
- //    	// }
-	// }
 
 	.section_subtitle{
 		@include flex-margin(15,30,100,0);
@@ -356,7 +258,6 @@ header{
 		@include flex-width(700);
 		text-align: right;
 		float: right;
-		// color: $white;
 		z-index: 4;
     	position: relative;
 	}
@@ -383,10 +284,6 @@ header{
 		background-color: $light-pink;
 	}
 
-	// .line.lineLeft, .line.lineRight{
-	// 	padding: 0px;
-	// }
-
 	.address{
 		display: inline-block;
     	position: absolute;
@@ -396,24 +293,22 @@ header{
     	background-color: rgba(0, 0, 0, 0.75);
     	@include flex-top(57);
     	@include flex-margin(0,0,0,18);
-    	// letter-spacing: 0.15rem;
     	color: $white;
-    	// @include font-dimensions(13,18);
 
 	    .address_cont{
-	    	padding: 20px;
+	    	@include flex-padding(20,20,20,20);
 	    	border: solid 1px $light-pink;
 	    }
 
 	    p{
 	    	margin: 0px;
-    font-family: 'franchise_freebold', sans-serif;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    font-size: 26px;
-    line-height: 30px;
+		    font-family: 'franchise_freebold', sans-serif;
+		    letter-spacing: 0.1rem;
+		    text-transform: uppercase;
+		    @include font-dimensions(26,30);
 	    }
 	}
+
 	.pin{
 		position: absolute;
 		z-index: 1;
@@ -424,8 +319,6 @@ header{
 }
 
 .promotions{
-	@include flex-padding(0,70,0,70);
-	position: relative;
 
 	.promotions_inner{
 		overflow: hidden;
@@ -433,26 +326,9 @@ header{
 		@include flex-padding(0,0,70,0);
 	}
 
-	// .title{
-	// 	margin: 0px;
-	// 	@include flex-padding(90,0,0,0);
-	// 	text-align: center;
-	// 	display: inline-block;
-	// 	@include font-dimensions(86,75);
-	// 	@include flex-margin(0,0,70,0);
-	// 	border-bottom: solid 5px $pink;
-	// 	position: relative;
-	// 	left: 50%;
-	// 	@include translate(-50%,0);
-	// }
-
 	.lineBG{
 		background-color: $light-pink;
 	}
-
-	// .line.lineLeft, .line.lineRight{
-	// 	padding: 0px;
-	// }
 
 	.promotion{
 		position: relative;
@@ -492,23 +368,69 @@ header{
 @include breakpoint(1174) {
 	.team{
 		.image_small{
-			@include flex-padding(20,10,20,10);
+			@include flex-padding(0,10,100,10);
 		}
 
 		.section_photos{
 			margin: 0px;
 		}
+
+		.image_big {
+			.image_image {
+				@include flex-width(540);
+			}
+			.image_info {
+				@include flex-left(540);
+			}
+		}
 	}
+
+	.section{
+		@include flex-padding(0,100,0,100);
+	}
+
+	.image_big {
+		.image_image {
+			@include flex-width(540);
+		}
+		.image_info {
+			@include flex-left(540);
+		}
+	}
+
+	.promotions{
+		.promotion{
+			width: 50%;
+		}
+	}
+
+	.studio{
+		.intro{
+			@include flex-width(540);
+		}
+	}
+
 }
 
-@include breakpoint(852) {
+@include breakpoint(tablet-or-smaller) {
+    .line,  .bigline{
+		display: none;
+	}
+
+	.section{
+		@include flex-padding(0,60,0,60);
+	}
+
+	header .logo{
+		width: 70%;
+	}
+
 	.studio{
-		@include flex-padding(20,20,20,20);
 
 		.intro{
 			width: 100%;
 			padding: 0px;
-			@include flex-margin(60,0,40,0);
+			@include flex-margin(100,0,100,0);
 			
 			span{
 				display: block;
@@ -523,90 +445,24 @@ header{
 			@include translate(-50%,0);
 		}
 	}
-}
 
-@include breakpoint(760) {
-	.promotions{
-		@include flex-padding(50,50,50,50);
-
-		.section_title{
-			@include flex-margin(20,0,20,0);
-			padding-top: 0px;
+	.team{
+		.image_big{
+			.image_image{
+				width: 100%;
+			}
+			.image_info{
+				@include flex-left(40);
+			}
 		}
-		.promotions_inner{
-			padding: 0px;
-		}
-		.promotion{
-			@include flex-padding(20,20,0,0);
-			width: 50%;
-		}
-	}
-}
 
-@include breakpoint(500) {
-	.promotions{
-		@include flex-padding(30,30,30,30);
-
-
-		.promotion{
-			@include flex-padding(20,0,0,0);
+		.section_subtitle{
 			width: 100%;
+			margin: 0px;
+			@include flex-padding(10,10,30,10);
+			box-sizing: border-box;
 		}
 	}
-}
-
-@include breakpoint(558) {
-	.line,  .bigline{
-		display: none;
-	}
-
-	header .logo{
-		width: 90%;
-	}
-}
-
-@include breakpoint(tablet-or-smaller) {
-    	html {
-      		font-size: 80%;
-      	}
-
-      	.team .section_photos{
-      		margin: 0px !important;
-      	}
-     }
-
-@include breakpoint(small-phone) {
-
-	.button{
-		@include font-dimensions(11,13);
-		letter-spacing: 0.05rem;
-	}
-
-	.studio{
-		padding: 0px;
-	}
-
-	// .studio{
-	// 	padding: 0px;
-
-	// 	.intro{
-	// 		width: 100%;
-	// 		padding: 0px;
-	// 		@include flex-margin(60,0,40,0);
-			
-	// 		span{
-	// 			display: block;
-	// 			@include flex-padding(40,40,0,40);
-	// 		}
-	// 	}
-			
-	// 	.utensils{
-	// 		position: relative;
-	// 		top: 0px;
-	// 		left: 50%;
-	// 		@include translate(-50%,0);
-	// 	}
-	// }
 
 	.image_big{
 		width: 100%;
@@ -628,6 +484,10 @@ header{
 		}
 	}
 
+	.image_small{
+		width: 50%;
+	}
+
 	.studio .desc{
 		width: 100%;
 		margin: 0px;
@@ -637,12 +497,60 @@ header{
 
 	footer{
 		height: auto;
+
+		.box{
+			width: 50%;
+		}
+
+		.withlogo{
+			width: 100%;
+			float: none;
+			border-right: none;
+			border-bottom: solid 1px;
+		}
+	}
+}
+
+@include breakpoint(605) {
+
+	header .logo{
+		width: 90%;
+	}
+
+	.section{
+		@include flex-padding(0,20,0,20);
+	}
+
+	.button{
+		@include font-dimensions(11,13);
+		letter-spacing: 0.05rem;
+	}
+
+	.studio{
+		padding: 0px;
 		
+		.intro{
+			@include flex-margin(60,0,40,0);
+		}
+	}
+
+	.promotions{
+		.promotion{
+			width: 100%;
+		}
+	}
+
+	footer{
 		.box{
 			float: none;
 			width: 100%;
 			border: none;
 			border-top: solid 1px;
+		}
+
+		.tooth{
+			left: 50%;
+			@include translate(-50%,0);
 		}
 	}
 
@@ -653,16 +561,10 @@ header{
 			display: block;
 		}
 
-		.section_subtitle{
-			width: 100%;
-			margin: 0px;
-			@include flex-padding(10,10,10,10);
-			box-sizing: border-box;
-		}
-
 		.clear{
 			margin: 0px;
 		}
+
 		.section_title{
 			@include flex-margin(20,0,20,0);
 			padding-top: 0px;
