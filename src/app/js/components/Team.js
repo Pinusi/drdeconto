@@ -23,7 +23,7 @@ class Team extends React.Component {
 						return <div className="clear"><PhotoBig photo_src={photos[i]} photo_txt={member.position} photo_header={member.name}/><PhotoSmall displaySmall="True" key={i} sequence={i-1} photo_src={photos[i]} photo_txt={member.position} photo_header={member.name}/></div>
 					}
 					else{
-						return <PhotoSmall key={i} sequence={i-1} photo_src={photos[i]} photo_txt={member.position} photo_header={member.name}/>
+						return <PhotoSmall key={i} sequence={i} photo_src={photos[i]} photo_txt={member.position} photo_header={member.name}/>
 					}
 		        })}
 		        <div className="clearFix"></div>

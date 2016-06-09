@@ -10,10 +10,10 @@ class Footer extends React.Component {
 	render() {
 		let pagePercentage=(this.props.scrollPosition/($(document).height() - $(window).height()))*100
 		let menuStyle = {
-			top: this.props.scrollPosition-$("header").height()-$("#studio").height()-$("#team").outerHeight()-$("#promotions").height()-$("#map").height()+65
+			top: this.props.scrollPosition-$("header").height()-$("#studio").height()-$("#team").outerHeight()-$("#photostripe").height()-$("#promotions").height()-$("#map").height()+65
 		};
 		let lineStyle = {
-			top: this.props.scrollPosition-$("header").height()-$("#studio").height()-$("#team").outerHeight()-$("#promotions").height()-$("#map").height(),
+			top: this.props.scrollPosition-$("header").height()-$("#studio").height()-$("#team").outerHeight()-$("#photostripe").height()-$("#promotions").height()-$("#map").height(),
 			height: pagePercentage + 'vh'
 		};
 		return (

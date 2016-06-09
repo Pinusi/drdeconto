@@ -76,7 +76,7 @@ footer{
 	    position: absolute;
 	    @include flex-left(237);
 	    @include flex-top(-65);
-	    opacity: 0.8;
+	    opacity: 0.3;
 	    z-index: 0;
 	}
 
@@ -202,13 +202,27 @@ header{
 	}
 
 	.utensils{
-		background: url('../assets/imgs/utensils.png') repeat;
-		background-size: cover;
-		@include flex-width(150);
-	    @include flex-height(100);
+		.img{
+			background: url('../assets/imgs/utensils.png') repeat;
+			background-size: cover;
+			@include flex-width(70);
+		    @include flex-height(51);
+		    position: absolute;
+		    @include flex-left(27);
+    		@include flex-top(38);
+		    // @include translate(-50%,-50%);
+		    @include transform(rotate(-45deg));
+		    // position: relative;
+		}
+
+		@include flex-width(130);
+	    @include flex-height(130);
+	    border: solid 1px $pink;
 	    position: absolute;
-	    left: -5px;
+	    left: -40px;
     	@include flex-top(5);
+    	z-index: -1;
+    	@include transform(rotate(45deg));
 	}
 
 	.intro{
@@ -227,6 +241,20 @@ header{
 		@include font-dimensions(20,28);
 		@include flex-width(700);
 	}
+}
+
+.photostripe{
+	@include flex-height(210);
+    position: relative;
+    width: 100%;
+
+    .photo{
+    	width: 25%;
+    	height: 100%;
+    	background-size: cover;
+    	background-position: 50% 50%;
+    	float: left;
+    }
 }
 
 .team{
@@ -434,7 +462,7 @@ header{
 			
 			span{
 				display: block;
-				@include flex-padding(40,40,0,40);
+				@include flex-padding(70,40,0,40);
 			}
 		}
 			
@@ -442,7 +470,7 @@ header{
 			position: relative;
 			top: 0px;
 			left: 50%;
-			@include translate(-50%,0);
+			@include transform(translate(-50%,0) rotate(45deg));
 		}
 	}
 
@@ -530,7 +558,7 @@ header{
 		padding: 0px;
 		
 		.intro{
-			@include flex-margin(60,0,40,0);
+			@include flex-margin(100,0,40,0);
 		}
 	}
 
@@ -551,6 +579,15 @@ header{
 		.tooth{
 			left: 50%;
 			@include translate(-50%,0);
+		}
+	}
+
+	.photostripe{
+		.photo{
+			width: 50%;
+		}
+		.no_mobile{
+			display: none;
 		}
 	}
 

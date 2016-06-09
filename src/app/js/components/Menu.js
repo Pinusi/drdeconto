@@ -14,10 +14,10 @@ class Menu extends React.Component {
 				break;
 			case 'team':
 				console.log($("#team").offset());
-				$("html, body").animate({ scrollTop: $("#team").offset() }, "slow");
+				$("html, body").animate({ scrollTop: $("#team").offset()['top'] }, "slow");
 				break;
 			case 'dove':
-				$("html, body").animate({ scrollTop: $("#map").offset() }, "slow");
+				$("html, body").animate({ scrollTop: $("#map").offset()['top'] }, "slow");
 				break;
 			case 'contatti':
 				$("html, body").animate({ scrollTop: $(document).height() }, "slow");

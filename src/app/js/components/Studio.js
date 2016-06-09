@@ -22,7 +22,9 @@ class Studio extends React.Component {
 		return <div id="studio" className="studio section">
 					<Line position="Right" />
 					<div className="intro">
-						<div className="utensils" ref={(ref) => this.utensils = ref}></div>
+						<div className="utensils" ref={(ref) => this.utensils = ref}>
+							<div className="img"></div>
+						</div>
 						{this.props.data.intro}
 					</div>
 					<PhotoBig photo_src={photo_one} photo_txt={this.props.data.photo_txt} photo_header={this.props.data.photo_header}/>

@@ -7,6 +7,7 @@ import Studio from './components/Studio';
 import Team from './components/Team';
 import Menu from './components/Menu';
 import Map from './components/Map';
+import PhotoStripe from './components/PhotoStripe';
 import Line from './components/Line';
 import Promotions from './components/Promotions';
 import data from '../../assets/data.json';
@@ -71,6 +72,7 @@ class Page extends React.Component {
 					<Header data={this.state.data.header} menuOpened={this.state.menuOpened} menuOver={this.handleMenuOver} menuOvered={this.state.menuOver} menuClick={this.handleMenuClick} scrollPosition={this.state.scrollPosition}/>
 					<div className="menuicon_container">
 						<Studio data={this.state.data.studio}/>
+						<PhotoStripe />
 						<Team data={this.state.data.team}/>
 						<Promotions data={this.state.data.promotions}/>
 						<Map />
